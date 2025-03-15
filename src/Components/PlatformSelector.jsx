@@ -9,7 +9,8 @@ function PlatformSelector({ onchangePlatform, value }) {
        }
         , [])
     const handleChange = (event) => {
-        const selectedPlatform = data.find(platform => platform.id == event.target.value)
+        const selectedPlatform = data?.results.find(platform => platform.id == event.target.value)
+        console.log(selectedPlatform)
         onchangePlatform(selectedPlatform)
 
     }

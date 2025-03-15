@@ -9,7 +9,7 @@ const useGames = (selectedGenre, selectedPlatform, sortSelected, searchvalue) =>
     const fetchdata = ({ pageParam = 1 }) => apiClient.getAll({
         params: {
             genres: selectedGenre?.id
-            , platforms: selectedPlatform?.id
+            , parent_platforms: selectedPlatform?.id
             , ordering: sortSelected
             , search: searchvalue
             , page: pageParam
