@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const GenresSkeleton = () => {
-    const arr = [1,2,3,4,5,6,7,8,9,0]
+    const arr = [1,2,3,4,5,6,7,8,9,10,11,12,13]
   return (
     <div className=" hidden lg:block max-w-sm  border-gray-200 shadow animate-pulse  ">
       <h2 className="text-3xl bold font-bold dark:text-white m-2">Genres</h2>

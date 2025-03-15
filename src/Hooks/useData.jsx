@@ -12,6 +12,7 @@ const useData = (endPoint, requestConfig, deps) => {
         setLoading(true)
         axiosApi.get(endPoint, { signal: controller.signal, ...requestConfig })
             .then(response => {
+            
                 setData(response.data.results)
                 setLoading(false)
             })

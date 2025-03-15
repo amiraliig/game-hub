@@ -4,9 +4,9 @@ import getCroppedImage from '../services/imageUrl';
 import { GenresSkeleton } from './GeneresSkeleton';
 
 function Genres({ onChangeGenres }) {
-
+    useEffect(() => { console.log(data) })
     const { data, error, isLoading } = useGenres()
-   
+
 
     if (isLoading) {
         return <GenresSkeleton />
@@ -18,7 +18,7 @@ function Genres({ onChangeGenres }) {
                 <div className="mx-4 hidden lg:block">
                     <h2 className="text-3xl bold font-bold dark:text-white m-2">Genres</h2>
                     <ul className="flex flex-col gap-2">
-                        {data.map((item, index) => (
+                        {data?.results.map((item, index) => (
 
                             <li
                                 key={item.id}

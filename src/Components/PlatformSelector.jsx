@@ -29,7 +29,8 @@ function PlatformSelector({ onchangePlatform, value }) {
     return (
         <div>
             <select  name="" id="" onChange={handleChange} className='border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 bg-[#202020] dark:placeholder-gray-400 dark:text-white'>
-                {data?.map((platform, index) => (
+                <option value="">All Platforms</option>
+                {data?.results.map((platform, index) => (
                     
                     <option value={platform.id} key={index}selected={value?.id == platform.id}>
                         {platform.name}

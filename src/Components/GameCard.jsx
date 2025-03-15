@@ -8,7 +8,7 @@ function GameCard({ game }) {
 
 
     return (
-        <div className="dark:text-white bg-[#43434341] rounded-lg cursor-pointer hover:relative h-[335px] ">
+        <div className="dark:text-white bg-[#43434341] rounded-lg cursor-pointer hover:relative min-h-[335px] ">
         <img
           src={getCroppedImage(game.background_image, 600, 400)}
           className="rounded-lg h-52 object-cover w-full m-auto "
