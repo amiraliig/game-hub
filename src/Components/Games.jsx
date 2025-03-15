@@ -13,17 +13,17 @@ function Games({ selectedGenres, searchvalue }) {
 
 
 
-    if (isloading) {
-        return <GameCardSkeleton />
-    }
+    // if (isloading) {
+    //     return <GameCardSkeleton />
+    // }
 
     return (
         <div className="dark:text-white lg:col-span-5 col-span-6 p-5 justify-center">
             <div className='flex gap-5 justify-center md:justify-normal'>
                 <PlatformSelector value={platformSelected} onchangePlatform={(item) => setPlatformSelected(item)} />
                 <SortSelector value={sortSelected} onChangeSelector={(item) => setSortSelected(item)} /></div>
-            <h2 className="font-bold text-3xl my-2">Trending Games</h2>
-            <div className="grid md:grid md:grid-cols-2 sm:grid  sm:grid-cols-1  lg:grid-cols-3 bg-opacity-30 gap-3">
+           <div className='my-8'>
+           {isloading ? <GameCardSkeleton /> :   <div className="grid md:grid md:grid-cols-2 sm:grid  sm:grid-cols-1  lg:grid-cols-3 bg-opacity-30 gap-4">
                 {data.map(
                     (item, index) =>
                         index < 9 && (
@@ -38,7 +38,9 @@ function Games({ selectedGenres, searchvalue }) {
                             </div>
                         )
                 )}
-            </div>
+            </div>}
+           </div>
+          
         </div>
     )
 }

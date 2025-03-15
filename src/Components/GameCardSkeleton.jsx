@@ -4,22 +4,22 @@ import SelectorSkeleton from "./SelectorSkeleton";
 const GameCardSkeleton = () => {
     const arr = [1, 2, 3, 4, 5, 6, 7];
     return (
-        <div className="lg:col-span-5 col-span-6 p-5" >
+   
 
 
             <div className="dark:text-white ">
-               <SelectorSkeleton/>
-                <h2 className="font-bold text-3xl my-2">Trending Games</h2>
-                <div className=" md:justify-center lg:justify-center md:grid md:grid-cols-2 lg:grid-cols-3 bg-opacity-30 gap-5">
+               {/* <SelectorSkeleton/> */}
+              
+                <div className=" md:justify-center lg:justify-center md:grid md:grid-cols-2 lg:grid-cols-3 bg-opacity-30 gap-5 ">
                     {arr.map((item, index) => (
                         <div
                             key={index}
                             role="status"
-                            className=" p-4 shadow animate-pulse md:p-6 dark:border-gray-700"
+                            className=" shadow animate-pulse md: dark:border-gray-700"
                         >
                             <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-[#9b9b9b41]">
                                 <svg
-                                    className="w-10 h-10 text-gray-200 dark:text-gray-600"
+                                    className=" h-10 text-gray-200 dark:text-gray-600"
                                     aria-hidden="true"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor"
@@ -38,7 +38,7 @@ const GameCardSkeleton = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            
 
         </div>
     );

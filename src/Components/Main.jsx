@@ -10,6 +10,7 @@ const Main = ({ searchvalue }) => {
   return <div className='grid grid-cols-6'>
 
     <Genres onChangeGenres={(genre) => setSelectedGenres(genre)} />
+      
     <Games searchvalue={searchvalue} selectedGenres={selectedGenres} onchangePlatform={(platform) => setPlatformSelected(platform)} />
 
 
