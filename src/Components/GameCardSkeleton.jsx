@@ -10,12 +10,12 @@ const GameCardSkeleton = () => {
             <div className="dark:text-white ">
                <SelectorSkeleton/>
                 <h2 className="font-bold text-3xl my-2">Trending Games</h2>
-                <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 bg-opacity-30 gap-5">
+                <div className=" md:justify-center lg:justify-center md:grid md:grid-cols-2 lg:grid-cols-3 bg-opacity-30 gap-5">
                     {arr.map((item, index) => (
                         <div
                             key={index}
                             role="status"
-                            className="max-w-sm p-4    shadow animate-pulse md:p-6 dark:border-gray-700"
+                            className=" p-4 shadow animate-pulse md:p-6 dark:border-gray-700"
                         >
                             <div className="flex items-center justify-center h-48 mb-4 bg-gray-300 rounded dark:bg-[#9b9b9b41]">
                                 <svg

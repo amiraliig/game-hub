@@ -3,7 +3,7 @@ import React from 'react'
 function SelectorSkeleton() {
   return (
     <div className="flex gap-5 justify-center md:justify-normal">
-    <div className="w-40">
+    <div className="w-36">
         <div className="flex items-center justify-center h-12 mb-4 bg-gray-300 rounded dark:bg-[#9b9b9b41]">
 
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-[#9b9b9b41] w-40 "></div>
@@ -15,7 +15,7 @@ function SelectorSkeleton() {
 
         </div>
     </div>
-    <div className="w-40">
+    <div className="w-36">
         <div className="flex items-center justify-center h-12 mb-4 bg-gray-300 rounded dark:bg-[#9b9b9b41]">
 
             <div className="h-2.5 bg-gray-200 rounded-full dark:bg-[#9b9b9b41] w-40 "></div>
