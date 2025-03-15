@@ -10,7 +10,7 @@ const Navbar = ({ onsearch }) => {
             <SearchBox onsearch={onsearch} />
             {/* لینک درباره من */}
            <div className='flex align-center gap-2 content-center items-center'>
-           <a href="" className='text-white text-lg border p-2 rounded-xl hover:bg-[#3c3c3c] h-12'>ABOUT ME</a>
+           <a href="https://github.com/amiraliig" className='text-white text-lg border p-2 rounded-xl hover:bg-[#3c3c3c] h-12'>ABOUT ME</a>
             {/* لوگو */}
             <img src={logo} alt="logo" className='size-32 md:block  ' />
            </div>
