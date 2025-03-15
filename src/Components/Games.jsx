@@ -13,7 +13,7 @@ function Games({ selectedGenres, searchvalue }) {
 
 
 
-    if (true) {
+    if (isloading) {
         return <GameCardSkeleton />
     }
 
