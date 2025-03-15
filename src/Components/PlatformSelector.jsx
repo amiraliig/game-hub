@@ -33,7 +33,7 @@ function PlatformSelector({ onchangePlatform, value }) {
                 <option value="">All Platforms</option>
                 {data?.results.map((platform, index) => (
                     
-                    <option value={platform.id} key={index}selected={value?.id == platform.id}>
+                    <option value={platform.id} key={index}selected={value?.id == platform.id} className=''>
                         {platform.name}
                     </option>
                 ))}
