@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react'
 import usePlatforms from '../Hooks/usePlatforms'
+import useGameStore from '../store'
 
-function PlatformSelector({ onchangePlatform, value }) {
+function PlatformSelector() {
 
     const { data, error, isLoading } = usePlatforms()
-    useEffect(() => {
-        console.log(data);
-       }
-        , [])
-    const handleChange = (event) => {
+    const { platformSelected, setPlatformSelected } = useGameStore((state) => ({
+        platformSelected: state.platformSelected,
+        setPlatformSelected: state.setPlatformSelected,
+    })); const handleChange = (event) => {
         const selectedPlatform = data?.results.find(platform => platform.id == event.target.value)
         console.log(selectedPlatform)
-        onchangePlatform(selectedPlatform)
+        setPlatformSelected(selectedPlatform.id)
 
     }
     if (isLoading) {
@@ -28,12 +28,12 @@ function PlatformSelector({ onchangePlatform, value }) {
         </div>
     }
     return (
-        <div>
-            <select  name="" id="" onChange={handleChange} className='border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 bg-[#202020] dark:placeholder-gray-400 dark:text-white'>
+        <div className=''>
+            <select name="" id="" onChange={handleChange} className='border border-gray-300 text-gray-900 text-sm rounded-lg  block w-full p-2.5 bg-[#202020] dark:placeholder-gray-400 dark:text-white'>
                 <option value="">All Platforms</option>
                 {data?.results.map((platform, index) => (
-                    
-                    <option value={platform.id} key={index}selected={value?.id == platform.id} className=''>
+
+                    <option value={platform.id} key={index} selected={platformSelected == platform.id} className=''>
                         {platform.name}
                     </option>
                 ))}

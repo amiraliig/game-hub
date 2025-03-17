@@ -2,10 +2,12 @@ import React, { useEffect } from 'react'
 import useGenres from '../Hooks/useGenres'
 import getCroppedImage from '../services/imageUrl';
 import { GenresSkeleton } from './GeneresSkeleton';
+import useGameStore from '../store';
 
-function Genres({ onChangeGenres }) {
-    useEffect(() => { console.log(data) })
+function Genres() {
+  
     const { data, error, isLoading } = useGenres()
+    const setSelectedGenres = useGameStore(state => state.setSelectedGenres)
 
 
     if (isLoading) {
@@ -24,7 +26,7 @@ function Genres({ onChangeGenres }) {
                                 key={item.id}
                                 className={"gap-2 flex items-center cursor-pointer hover:bg-[#7171714f] rounded-lg transition duration-500 p-1 hover:scale-110 hover:font-bold "}
                                 onClick={() => {
-                                    onChangeGenres(item)
+                                    setSelectedGenres(item.id)
                                 }}
                             >
                                 <img

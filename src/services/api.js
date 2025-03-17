@@ -14,7 +14,7 @@ class APIClient {
     }
     getAll = (config) => {
         return axiosApi.get(this.endpoint, config).then(response => {
-            console.log(response.data.results)
+         
             return response.data
         })
     }
