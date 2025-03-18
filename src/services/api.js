@@ -14,7 +14,12 @@ class APIClient {
     }
     getAll = (config) => {
         return axiosApi.get(this.endpoint, config).then(response => {
-         
+
+            return response.data
+        })
+    }
+    get = (id) => {
+        return axiosApi.get(this.endpoint + "/" + id).then(response => {
             return response.data
         })
     }

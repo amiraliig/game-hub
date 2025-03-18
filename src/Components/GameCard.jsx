@@ -1,14 +1,14 @@
 import React from 'react'
 import Platforms from './Platforms'
 import getCroppedImage from '../services/imageUrl';
-
+import { Link } from 'react-router-dom';
 import ScorOfGame from './ScorOfGame';
 import PlatformSelector from './PlatformSelector';
 function GameCard({ game }) {
 
 
     return (
-        <div className="dark:text-white bg-[#43434341] rounded-lg cursor-pointer hover:relative min-h-[335px] ">
+        <div className="dark:text-white bg-[#43434341] rounded-lg cursor-pointer hover:relative min-h-[335px] hover:scale-105 transition duration-500 ">
         <img
           src={getCroppedImage(game.background_image, 600, 400)}
           className="rounded-lg h-52 object-cover w-full m-auto "
