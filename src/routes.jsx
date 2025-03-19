@@ -8,11 +8,12 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
-        errorElement: <ErrorPage />,
+        errorElement: <ErrorPage />, 
         children: [
             { index: true, element: <HomePage /> },
-            { path: "games/:slug", element: <GameDetailsPage /> }
+            { path: "games/:slug", element: <GameDetailsPage /> },
+            { path: "*", element: <ErrorPage /> } 
         ]
     }
-])
+]);
 export default router;

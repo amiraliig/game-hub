@@ -5,8 +5,8 @@ import Navbar from '../Components/Navbar'
 const ErrorPage = () => {
     const error = useRouteError()
     return (
-        <div className='bg-[#151515] h-screen text-white'> 
-            <Navbar />
+        <div className='bg-[#151515] h-screen text-white'>
+
             <h1>oops</h1>
             <h2>{isRouteErrorResponse(error) ? "This is page does not exist." : "An unexpected Error"}</h2>
         </div>
