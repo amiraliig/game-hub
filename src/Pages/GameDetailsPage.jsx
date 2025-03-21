@@ -10,9 +10,12 @@ import GameMedia from '../Components/GameMedia'
 const GameDetailsPage = () => {
   const { slug } = useParams()
   const { data, isLoading, error } = useGame(slug)
-  useEffect(() => {
-    console.log(data)
-  })
+  if(isLoading){
+    console.log(isLoading)
+    return <div className='text-white h-screen felx justify-center align-middle items-center'>
+      <p className='text-center'>loading...</p>
+    </div>
+  }
   return (
     <div className=''>
 

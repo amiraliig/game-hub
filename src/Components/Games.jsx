@@ -22,6 +22,7 @@ function Games() {
             <div className='my-8'>
                 {isLoading ? <GameCardSkeleton /> : <div className="grid md:grid md:grid-cols-2 sm:grid  sm:grid-cols-1  lg:grid-cols-3 bg-opacity-30 gap-4">
                     {data?.pages.map((page, index) => <React.Fragment key={index}>
+                        {page.results.length == 0 && <div>not found</div>}
                         {page.results.map(
                             (item, index) =>
                                 index < 9 && (
